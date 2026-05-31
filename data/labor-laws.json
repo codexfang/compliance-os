@@ -1,0 +1,463 @@
+{
+  "states": {
+    "AL": {
+    "name": "Alabama",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "AK": {
+    "name": "Alaska",
+    "overtime": { "dailyThreshold": 8, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "AS 23.10.060", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "AZ": {
+    "name": "Arizona",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "AR": {
+    "name": "Arkansas",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "CA": {
+    "name": "California",
+    "overtime": { "dailyThreshold": 8, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": 12, "doubleTimeRate": 2.0, "seventhDayRules": true },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 5, "mustStartBeforeHour": 5, "secondMealAfterHours": 10, "waivable": true, "penaltyPay": true },
+    "restPeriod": { "required": true, "minDuration": 10, "triggerAfterHours": 4, "paid": true },
+    "minimumShiftGap": { "hours": 12, "penaltyPay": true },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "CA Labor Code § 510 & § 511", "mealBreak": "CA Labor Code § 512 & IWC Wage Orders", "restPeriod": "CA Labor Code § 226.7 & IWC Wage Orders", "shiftGap": "CA Labor Code § 551-552 & IWC Wage Orders" }
+  },
+  "CO": {
+    "name": "Colorado",
+    "overtime": { "dailyThreshold": 12, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 5, "mustStartBeforeHour": 6, "secondMealAfterHours": null, "waivable": true, "penaltyPay": false },
+    "restPeriod": { "required": true, "minDuration": 10, "triggerAfterHours": 4, "paid": true },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "CO Code Regs. § 7 CCR 1103-1", "mealBreak": "CO Code Regs. § 7 CCR 1103-1", "restPeriod": "CO Code Regs. § 7 CCR 1103-1", "shiftGap": "N/A" }
+  },
+  "CT": {
+    "name": "Connecticut",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 7.5, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": true, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "CT Gen. Stat. § 31-51ii", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "DE": {
+    "name": "Delaware",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 7.5, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "19 DE Code § 707", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "DC": {
+    "name": "District of Columbia",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 5, "mustStartBeforeHour": 5, "secondMealAfterHours": null, "waivable": false, "penaltyPay": true },
+    "restPeriod": { "required": true, "minDuration": 10, "triggerAfterHours": 4, "paid": true },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "DC Code § 32-1003", "mealBreak": "DC Code § 32-1012", "restPeriod": "DC Code § 32-1011", "shiftGap": "N/A" }
+  },
+  "FL": {
+    "name": "Florida",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "GA": {
+    "name": "Georgia",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "HI": {
+    "name": "Hawaii",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 5, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "HI Rev. Stat. § 387-3", "mealBreak": "HI Rev. Stat. § 387-1 (case law)", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "ID": {
+    "name": "Idaho",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "IL": {
+    "name": "Illinois",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 20, "triggerAfterHours": 7.5, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207 & IL Minimum Wage Law", "mealBreak": "820 ILCS 140/3", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "IN": {
+    "name": "Indiana",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "IA": {
+    "name": "Iowa",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "KS": {
+    "name": "Kansas",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "KY": {
+    "name": "Kentucky",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 5, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "KY Rev. Stat. § 337.355", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "LA": {
+    "name": "Louisiana",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "ME": {
+    "name": "Maine",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 6, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "26 ME Rev. Stat. § 601", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "MD": {
+    "name": "Maryland",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 6, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "MD Lab. & Empl. Code § 3-415", "mealBreak": "MD Lab. & Empl. Code § 3-708", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "MA": {
+    "name": "Massachusetts",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 6, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "MA Gen. Laws ch. 151, § 1A", "mealBreak": "MA Gen. Laws ch. 149, § 100", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "MI": {
+    "name": "Michigan",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "MN": {
+    "name": "Minnesota",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 6, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": true, "minDuration": 30, "triggerAfterHours": 6, "paid": true },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "MN Stat. § 177.253", "restPeriod": "MN Stat. § 177.254", "shiftGap": "N/A" }
+  },
+  "MS": {
+    "name": "Mississippi",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "MO": {
+    "name": "Missouri",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "MT": {
+    "name": "Montana",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "NE": {
+    "name": "Nebraska",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 6, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "NE Rev. Stat. § 48-212", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "NV": {
+    "name": "Nevada",
+    "overtime": { "dailyThreshold": 8, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 8, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": true, "minDuration": 10, "triggerAfterHours": 3.5, "paid": true },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "NV Rev. Stat. § 608.018", "mealBreak": "NV Rev. Stat. § 608.019", "restPeriod": "NV Rev. Stat. § 608.019", "shiftGap": "N/A" }
+  },
+  "NH": {
+    "name": "New Hampshire",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 5, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "NH Rev. Stat. § 275:30-a", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "NJ": {
+    "name": "New Jersey",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "NM": {
+    "name": "New Mexico",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "NY": {
+    "name": "New York",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 6, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": true, "minDuration": 10, "triggerAfterHours": 4, "paid": true },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "NY Lab. Law § 650 & 12 NYCRR 142", "mealBreak": "NY Lab. Law § 162", "restPeriod": "NY Lab. Law § 161 (factory workers)", "shiftGap": "N/A" }
+  },
+  "NC": {
+    "name": "North Carolina",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "ND": {
+    "name": "North Dakota",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "OH": {
+    "name": "Ohio",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "OK": {
+    "name": "Oklahoma",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "OR": {
+    "name": "Oregon",
+    "overtime": { "dailyThreshold": 10, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 6, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": true, "minDuration": 10, "triggerAfterHours": 4, "paid": true },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "OR Rev. Stat. § 653.261", "mealBreak": "OR Admin. Rules 839-020-0050", "restPeriod": "OR Admin. Rules 839-020-0050", "shiftGap": "N/A" }
+  },
+  "PA": {
+    "name": "Pennsylvania",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207 & PA Minimum Wage Act", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "RI": {
+    "name": "Rhode Island",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 20, "triggerAfterHours": 6, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "RI Gen. Laws § 28-3-14", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "SC": {
+    "name": "South Carolina",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "SD": {
+    "name": "South Dakota",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "TN": {
+    "name": "Tennessee",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 6, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "TN Code § 50-2-103 (certain industries)", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "TX": {
+    "name": "Texas",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "UT": {
+    "name": "Utah",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "VT": {
+    "name": "Vermont",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 5, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "21 VSA § 303", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "VA": {
+    "name": "Virginia",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "WA": {
+    "name": "Washington",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 30, "triggerAfterHours": 5, "mustStartBeforeHour": 5, "secondMealAfterHours": null, "waivable": true, "penaltyPay": false },
+    "restPeriod": { "required": true, "minDuration": 10, "triggerAfterHours": 4, "paid": true },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "WA Rev. Code § 49.46.130", "mealBreak": "WAC 296-126-092", "restPeriod": "WAC 296-126-092", "shiftGap": "N/A" }
+  },
+  "WV": {
+    "name": "West Virginia",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": true, "minDuration": 20, "triggerAfterHours": 6, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "WV Code § 21-3-10a", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "WI": {
+    "name": "Wisconsin",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  },
+  "WY": {
+    "name": "Wyoming",
+    "overtime": { "dailyThreshold": null, "weeklyThreshold": 40, "rate": 1.5, "doubleTimeThreshold": null, "doubleTimeRate": null, "seventhDayRules": false },
+    "mealBreak": { "required": false, "minDuration": null, "triggerAfterHours": null, "mustStartBeforeHour": null, "secondMealAfterHours": null, "waivable": false, "penaltyPay": false },
+    "restPeriod": { "required": false, "minDuration": null, "triggerAfterHours": null, "paid": false },
+    "minimumShiftGap": { "hours": null, "penaltyPay": false },
+    "maxShiftDuration": { "hours": null },
+    "citations": { "overtime": "29 U.S.C. § 207", "mealBreak": "N/A", "restPeriod": "N/A", "shiftGap": "N/A" }
+  }
+}
+}

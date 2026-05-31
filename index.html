@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compliance OS — Labor law compliance analysis for employee shift schedules across all 50 U.S. states.">
+  <title>Compliance OS</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" defer></script>
+  <script src="utils/parser.js" defer></script>
+  <script src="utils/validator.js" defer></script>
+  <script src="utils/scorer.js" defer></script>
+  <script src="utils/export.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-container" id="app">
+    <header class="app-header">
+      <h1>Compliance <span>OS</span></h1>
+      <div class="header-meta">Labor Law Compliance Engine</div>
+    </header>
+
+    <div class="dashboard-grid">
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Upload Schedule</span>
+        </div>
+        <div class="upload-zone" id="uploadZone">
+          <div class="upload-zone-icon">⊞</div>
+          <div class="upload-zone-text">Drop CSV file here or click to browse</div>
+          <div class="upload-zone-hint">Columns: Employee Name, Date, Start Time, End Time, Break Duration</div>
+          <input type="file" id="fileInput" accept=".csv">
+          <div class="file-info" id="fileInfo"></div>
+          <button class="sample-data-btn" id="sampleBtn" type="button">Load Sample Data</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Jurisdiction</span>
+        </div>
+        <div class="state-selector-wrapper">
+          <select class="state-select" id="stateSelect">
+            <option value="">Select a state...</option>
+          </select>
+          <div class="toggle-wrapper">
+            <label class="toggle">
+              <input type="checkbox" id="californiaToggle">
+              <span class="toggle-slider"></span>
+            </label>
+            <span class="toggle-label">CA Mode</span>
+            <span class="toggle-badge">Enhanced</span>
+          </div>
+        </div>
+        <div class="california-banner" id="californiaBanner">
+          California Mode active — stricter overtime thresholds, meal/rest break rules, and enhanced compliance checks applied.
+        </div>
+      </div>
+    </div>
+
+    <div class="dashboard-grid">
+      <div class="card card-full" id="dashboardScore">
+        <div class="card-header">
+          <span class="card-title">Compliance Score</span>
+        </div>
+        <div class="empty-state">
+          <div class="empty-state-icon">📊</div>
+          <div class="empty-state-text">Upload shift data and select a state to see compliance analysis</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dashboard-grid">
+      <div class="card card-full">
+        <div class="card-header">
+          <span class="card-title">Violations Report</span>
+        </div>
+        <div id="violationsContainer">
+          <div class="empty-state">
+            <div class="empty-state-icon">📋</div>
+            <div class="empty-state-text">No violations to display</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dashboard-grid">
+      <div class="card card-full">
+        <div class="card-header">
+          <span class="card-title">Export</span>
+        </div>
+        <div class="export-actions" id="exportActions">
+          <button class="btn" disabled>Export Violations</button>
+          <button class="btn" disabled>Export Corrected Schedule</button>
+          <button class="btn" disabled>Export Summary</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer"></div>
+</body>
+</html>
