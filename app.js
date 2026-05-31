@@ -104,6 +104,7 @@
     const file = e.target.files[0];
     if (!file) return;
     state.fileName = file.name;
+    DOM.fileInput.value = '';
     const reader = new FileReader();
     reader.onload = function(evt) {
       try {
@@ -114,7 +115,6 @@
           return;
         }
         state.shifts = shifts;
-        DOM.fileInput.value = '';
         saveToStorage();
         showToast(`Loaded ${shifts.length} shifts from ${file.name}`, 'success');
         renderAll();
@@ -342,11 +342,12 @@
     toast.className = `toast ${type}`;
     toast.textContent = message;
     DOM.toastContainer.appendChild(toast);
+    const duration = type === 'error' ? 8000 : 3500;
     setTimeout(() => {
       toast.style.opacity = '0';
       toast.style.transform = 'translateY(8px)';
       setTimeout(() => toast.remove(), 300);
-    }, 3000);
+    }, duration);
   }
 
   function escapeHtml(str) {
