@@ -1,6 +1,6 @@
 # Compliance OS
 
-A production-quality, fully static web application that analyzes employee shift schedules and detects labor law compliance violations across all 50 U.S. states. Designed as a professional HR and operations compliance tool that runs entirely in the browser.
+A web application that analyzes employee shift schedules and detects labor law compliance violations across all 50 U.S. states. Designed as a professional HR and operations compliance tool that runs entirely in the browser.
 
 ## Features
 
@@ -14,10 +14,6 @@ A production-quality, fully static web application that analyzes employee shift 
 - **Export Reports** — Download violation reports (CSV), corrected schedules (CSV), and compliance summaries
 - **Session Persistence** — Browser storage preserves uploaded data and settings between sessions
 - **Sample Data** — Built-in sample dataset for immediate testing
-
-## Screenshots
-
-> *Screenshots to be added.*
 
 ## Tech Stack
 
@@ -36,53 +32,6 @@ A production-quality, fully static web application that analyzes employee shift 
 5. Review the compliance score and violations report
 6. Download violation reports or corrected schedules as CSV
 
-### CSV Format
-
-```csv
-Employee Name,Date,Start Time,End Time,Break Duration
-Jane Smith,2024-03-01,09:00,18:00,30
-John Doe,2024-03-01,07:00,15:00,30
-```
-
-- Times can be in 12-hour (`09:00 AM`) or 24-hour (`09:00`) format
-- Break Duration is in minutes
-
-## Deployment (GitHub Pages)
-
-1. Push this repository to GitHub
-2. Go to **Settings > Pages**
-3. Under **Branch**, select `main` and root folder `/`
-4. Save — your site will be live at `https://codexfang.github.io/compliance-os`
-
-To deploy manually:
-
-```bash
-git clone https://github.com/codexfang/compliance-os.git
-cd compliance-os
-git checkout -b gh-pages
-git push origin gh-pages
-```
-
-Then configure GitHub Pages to serve from the `gh-pages` branch.
-
-## Project Structure
-
-```
-compliance-os/
-├── index.html          # Main UI
-├── styles.css          # Responsive styling
-├── app.js              # Core logic and UI controller
-├── data/
-│   └── labor-laws.json # 50-state labor law rules
-├── utils/
-│   ├── parser.js       # CSV parsing and normalization
-│   ├── validator.js    # Rule engine and violation detection
-│   ├── scorer.js       # Compliance scoring and grading
-│   └── export.js       # CSV export and download
-├── README.md
-└── LICENSE
-```
-
 ## License
 
-MIT License — see [LICENSE](LICENSE).
+MIT
