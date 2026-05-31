@@ -1,5 +1,4 @@
 (function() {
-  const STORAGE_KEY = 'compliance_os_data';
   const STORAGE_LAWS_KEY = 'compliance_os_laws';
 
   let state = {
@@ -16,7 +15,7 @@
 
   function init() {
     cacheDOM();
-    loadFromStorage();
+    cleanStorage();
     loadLaborLaws();
     bindEvents();
     renderAll();
@@ -89,13 +88,11 @@
     DOM.sampleBtn.addEventListener('click', loadSampleData);
     DOM.stateSelect.addEventListener('change', e => {
       state.selectedState = e.target.value;
-      saveToStorage();
       runAnalysis();
     });
     DOM.strictToggle.addEventListener('change', e => {
       state.strictMode = e.target.checked;
       DOM.app.classList.toggle('strict-mode', state.strictMode);
-      saveToStorage();
       runAnalysis();
     });
   }
@@ -115,7 +112,6 @@
           return;
         }
         state.shifts = shifts;
-        saveToStorage();
         showToast(`Loaded ${shifts.length} shifts from ${file.name}`, 'success');
         renderAll();
         runAnalysis();
@@ -132,7 +128,6 @@
       const shifts = ComplianceParser.parseCSV(csv);
       state.shifts = shifts;
       state.fileName = 'sample-data.csv';
-      saveToStorage();
       showToast(`Loaded ${shifts.length} sample shifts`, 'success');
       renderAll();
       runAnalysis();
@@ -356,28 +351,8 @@
     return div.innerHTML;
   }
 
-  function saveToStorage() {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({
-        shifts: state.shifts,
-        selectedState: state.selectedState,
-        strictMode: state.strictMode,
-        fileName: state.fileName
-      }));
-    } catch (e) {}
-  }
-
-  function loadFromStorage() {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) {
-        const data = JSON.parse(stored);
-        state.shifts = data.shifts || [];
-        state.selectedState = data.selectedState || 'CA';
-        state.strictMode = data.strictMode || false;
-        state.fileName = data.fileName || null;
-      }
-    } catch (e) {}
+  function cleanStorage() {
+    try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
   }
 
   document.addEventListener('DOMContentLoaded', init);

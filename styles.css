@@ -77,8 +77,10 @@ body {
 }
 
 .header-meta {
-  font-size: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 400;
   color: var(--color-text-muted);
+  letter-spacing: -0.02em;
 }
 
 .dashboard-grid {
