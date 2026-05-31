@@ -139,7 +139,7 @@
   function runAnalysis() {
     if (!state.shifts.length || !state.laws) {
       state.violations = [];
-      state.scoreData = ComplianceScorer.calculateScore([], []);
+      state.scoreData = null;
       renderScore();
       renderViolations();
       renderExport();
