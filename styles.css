@@ -59,9 +59,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 0 24px;
+  padding: 8px 0 16px;
   border-bottom: 1px solid var(--color-border);
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .app-header h1 {
@@ -77,12 +77,8 @@ body {
 }
 
 .header-meta {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   color: var(--color-text-muted);
-  padding: 6px 12px;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
 }
 
 .dashboard-grid {
@@ -700,12 +696,12 @@ body {
 .toast.error { background: var(--color-violation); }
 .toast.info { background: var(--color-primary); }
 
-/* California mode active indicator */
-.california-active .toggle-wrapper {
+/* Strict mode active indicator */
+.strict-mode .toggle-wrapper {
   color: var(--color-warning);
 }
 
-.california-banner {
+.strict-banner {
   display: none;
   margin-top: 12px;
   padding: 10px 14px;
@@ -716,6 +712,6 @@ body {
   color: #92400e;
 }
 
-.california-active .california-banner {
+.strict-mode .strict-banner {
   display: block;
 }

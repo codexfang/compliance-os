@@ -27,28 +27,28 @@ const ComplianceValidator = (() => {
 
   const CA_GAP = { hours: 12, penaltyPay: true };
 
-  function validateAll(shifts, stateCode, stateLaws, californiaMode) {
+  function validateAll(shifts, stateCode, stateLaws, strictMode) {
     const violations = [];
     let laws = stateLaws.states[stateCode];
     if (!laws) return violations;
 
-    if (californiaMode) {
+    if (strictMode) {
       laws = applyCaliforniaMode();
     }
 
-    const overtimeViolations = checkOvertime(shifts, laws, californiaMode);
-    const mealViolations = checkMealBreaks(shifts, laws, californiaMode);
-    const restViolations = checkRestPeriods(shifts, laws, californiaMode);
-    const gapViolations = checkShiftGaps(shifts, laws, californiaMode);
+    const overtimeViolations = checkOvertime(shifts, laws, strictMode);
+    const mealViolations = checkMealBreaks(shifts, laws, strictMode);
+    const restViolations = checkRestPeriods(shifts, laws, strictMode);
+    const gapViolations = checkShiftGaps(shifts, laws, strictMode);
 
     violations.push(...overtimeViolations);
     violations.push(...mealViolations);
     violations.push(...restViolations);
     violations.push(...gapViolations);
 
-    if (californiaMode) {
-      const californiaExtra = californiaSpecificChecks(shifts, stateLaws.states['CA']);
-      violations.push(...californiaExtra);
+    if (strictMode) {
+      const extraChecks = californiaSpecificChecks(shifts, stateLaws.states['CA']);
+      violations.push(...extraChecks);
     }
 
     return violations;
@@ -70,7 +70,7 @@ const ComplianceValidator = (() => {
     };
   }
 
-  function checkOvertime(shifts, laws, californiaMode) {
+  function checkOvertime(shifts, laws, strictMode) {
     const violations = [];
     const ot = laws.overtime;
 
@@ -131,7 +131,7 @@ const ComplianceValidator = (() => {
         }
       }
 
-      if (ot.seventhDayRules && californiaMode) {
+      if (ot.seventhDayRules && strictMode) {
         for (let i = 0; i < sorted.length; i++) {
           const s = sorted[i];
           const date = new Date(s.date);
@@ -161,14 +161,14 @@ const ComplianceValidator = (() => {
     return violations;
   }
 
-  function checkMealBreaks(shifts, laws, californiaMode) {
+  function checkMealBreaks(shifts, laws, strictMode) {
     const violations = [];
     const meal = laws.mealBreak;
     if (!meal.required) return violations;
 
     for (const s of shifts) {
       if (s.shiftHours > meal.triggerAfterHours) {
-        if (californiaMode && meal.mustStartBeforeHour) {
+        if (strictMode && meal.mustStartBeforeHour) {
           violations.push({
             employee: s.employee,
             date: s.date,
@@ -219,7 +219,7 @@ const ComplianceValidator = (() => {
     return violations;
   }
 
-  function checkRestPeriods(shifts, laws, californiaMode) {
+  function checkRestPeriods(shifts, laws, strictMode) {
     const violations = [];
     const rest = laws.restPeriod;
     if (!rest.required) return violations;
@@ -241,7 +241,7 @@ const ComplianceValidator = (() => {
     return violations;
   }
 
-  function checkShiftGaps(shifts, laws, californiaMode) {
+  function checkShiftGaps(shifts, laws, strictMode) {
     const violations = [];
     const gap = laws.minimumShiftGap;
     if (!gap.hours) return violations;

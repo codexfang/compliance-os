@@ -7,7 +7,7 @@
     violations: [],
     scoreData: null,
     selectedState: 'CA',
-    californiaMode: false,
+    strictMode: false,
     laws: null,
     fileName: null
   };
@@ -29,8 +29,8 @@
     DOM.fileInfo = document.getElementById('fileInfo');
     DOM.sampleBtn = document.getElementById('sampleBtn');
     DOM.stateSelect = document.getElementById('stateSelect');
-    DOM.californiaToggle = document.getElementById('californiaToggle');
-    DOM.californiaBanner = document.getElementById('californiaBanner');
+    DOM.strictToggle = document.getElementById('strictToggle');
+    DOM.strictBanner = document.getElementById('strictBanner');
     DOM.dashboardScore = document.getElementById('dashboardScore');
     DOM.violationsContainer = document.getElementById('violationsContainer');
     DOM.exportActions = document.getElementById('exportActions');
@@ -92,9 +92,9 @@
       saveToStorage();
       runAnalysis();
     });
-    DOM.californiaToggle.addEventListener('change', e => {
-      state.californiaMode = e.target.checked;
-      DOM.app.classList.toggle('california-active', state.californiaMode);
+    DOM.strictToggle.addEventListener('change', e => {
+      state.strictMode = e.target.checked;
+      DOM.app.classList.toggle('strict-mode', state.strictMode);
       saveToStorage();
       runAnalysis();
     });
@@ -110,7 +110,7 @@
         const text = evt.target.result;
         const shifts = ComplianceParser.parseCSV(text);
         if (!shifts.length) {
-          showToast('No valid shift data found. Check CSV format.', 'error');
+          showToast('No valid shift data found. CSV must have columns: Employee Name, Date, Start Time, End Time, Break Duration.', 'error');
           return;
         }
         state.shifts = shifts;
@@ -155,7 +155,7 @@
       state.shifts,
       state.selectedState,
       state.laws,
-      state.californiaMode
+      state.strictMode
     );
 
     state.scoreData = ComplianceScorer.calculateScore(state.shifts, state.violations);
@@ -169,7 +169,7 @@
     renderScore();
     renderViolations();
     renderExport();
-    DOM.app.classList.toggle('california-active', state.californiaMode);
+    DOM.app.classList.toggle('strict-mode', state.strictMode);
   }
 
   function renderUploadZone() {
@@ -251,6 +251,15 @@
 
   function renderViolations() {
     const violations = state.violations;
+    if (!state.shifts.length) {
+      DOM.violationsContainer.innerHTML = `
+        <div class="empty-state">
+          <div class="empty-state-icon">📋</div>
+          <div class="empty-state-text">Awaiting schedule data — upload a CSV or load sample data to begin analysis</div>
+        </div>
+      `;
+      return;
+    }
     if (!violations.length) {
       DOM.violationsContainer.innerHTML = `
         <div class="empty-state">
@@ -296,11 +305,7 @@
 
   function renderExport() {
     if (!state.shifts.length || !state.violations.length) {
-      DOM.exportActions.innerHTML = `
-        <button class="btn" disabled>Export Violations</button>
-        <button class="btn" disabled>Export Corrected Schedule</button>
-        <button class="btn" disabled>Export Summary</button>
-      `;
+      DOM.exportActions.innerHTML = `<span style="font-size:0.8125rem;color:var(--color-text-muted);">Upload and analyze shift data to enable exports</span>`;
       return;
     }
 
@@ -355,7 +360,7 @@
       localStorage.setItem(STORAGE_KEY, JSON.stringify({
         shifts: state.shifts,
         selectedState: state.selectedState,
-        californiaMode: state.californiaMode,
+        strictMode: state.strictMode,
         fileName: state.fileName
       }));
     } catch (e) {}
@@ -368,7 +373,7 @@
         const data = JSON.parse(stored);
         state.shifts = data.shifts || [];
         state.selectedState = data.selectedState || 'CA';
-        state.californiaMode = data.californiaMode || false;
+        state.strictMode = data.strictMode || false;
         state.fileName = data.fileName || null;
       }
     } catch (e) {}
