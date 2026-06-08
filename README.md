@@ -31,7 +31,3 @@ A web application that analyzes employee shift schedules and detects labor law c
 4. Toggle **California Mode** for enhanced compliance checks
 5. Review the compliance score and violations report
 6. Download violation reports or corrected schedules as CSV
-
-## License
-
-MIT
